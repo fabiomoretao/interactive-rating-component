@@ -1,0 +1,26 @@
+.raterBtn {
+    background: linear-gradient(to bottom, var(--card-color), var(--card-color));
+    border-radius: 50%;
+    height: 3rem;
+    padding: 1rem 1.2rem;
+    transition: .5s;
+    width: 3rem;
+}
+
+.raterBtn:hover {
+    background: var(--white);
+    color: var(--bg-color);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.clickedRaterBtn {
+    background: var(--primary-color);
+    border-radius: 50%;
+    color: var(--bg-color);
+    cursor: pointer;
+    height: 3rem;
+    padding: 1rem 1.2rem;
+    transition: .5s;
+    width: 3rem;
+}
