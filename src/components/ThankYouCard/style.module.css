@@ -1,0 +1,49 @@
+.container {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+}
+
+.card {
+    align-items: center;
+    background: linear-gradient(to bottom, var(--card-color), var(--bg-color));
+    border: 2px solid var(--card-color);
+    border-radius: 30px;
+    display: flex;
+    flex: 1 1 25rem;
+    flex-direction: column;
+    gap: .5rem;
+    margin: auto;
+    padding: 1.9rem;
+    max-width: 25rem;
+}
+
+.img {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: 5px;   
+}
+
+.rate {
+    background-color: var(--card-color);
+    border-radius: 20px;
+    color: var(--primary-color);
+    font-size: 15px;
+    margin-bottom: 2rem;
+    padding: .5rem 2rem;
+}
+
+.title {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.text {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5rem;
+    text-align: center;
+}

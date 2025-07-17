@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react"
 
-export default function useRating(){
+export default function UseRating(){
        const [selectedRating, setSelectedRating] = useState(null)
     
        const handleSelect = useCallback ((number) =>{

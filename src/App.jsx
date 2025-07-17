@@ -1,11 +1,9 @@
-import Card from "./components/Card"
-
-function App () {
-  return (
-    <div>
-      <Card />
-    </div>
-  )
+import CardSwitcher from "./container/CardSwitcher"
+function App() {
+  
+  return (<>
+    <CardSwitcher />
+  </>)
 }
 
 export default App

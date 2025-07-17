@@ -5,7 +5,7 @@ export default function Rater({ number, isActive, onClick }) {
     return (
         <>
             <span onClick={()=> onClick(number)}
-             className={ isActive ? style.clickedRaterBtn : style.raterBtn}>
+             className={ isActive ? style.clickedRaterBtn : style.standartRaterBtn}>
             {number}
             </span>
         </>
