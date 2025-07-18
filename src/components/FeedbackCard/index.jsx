@@ -1,7 +1,7 @@
 import Rater from "../Rater"
 import Button from "../Button"
 import style from "./style.module.css"
-
+import star from "../../assets/icon-star.svg"
 
 function FeedbackCard({selectedRating, handleSelect, send}) {
 
@@ -9,7 +9,7 @@ function FeedbackCard({selectedRating, handleSelect, send}) {
         <section className={style.container}>
             <div className={style.card}>
                 <div className={style.img}>
-                    <img src="src\assets\icon-star.svg" alt="star" width={12} height={12} />
+                    <img src={star} alt="star" width={12} height={12} />
                 </div>
 
                 <h1 className={style.title}>How did we do?</h1>

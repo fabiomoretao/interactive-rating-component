@@ -1,4 +1,5 @@
 import style from "./style.module.css"
+import thankYou from "../../assets/illustration-thank-you.svg"
 
 export default function ThankYouCard ({selectedRating}) {
     
@@ -6,7 +7,7 @@ export default function ThankYouCard ({selectedRating}) {
       <section className={style.container}>
             <div className={style.card}>
                 <div className={style.img}>
-                    <img src="src\assets\illustration-thank-you.svg" alt="Thank You ;)" width={150} />
+                    <img src={thankYou} alt="Thank You ;)" width={150} />
                 </div>
 
                 <span className={style.rate}>You selected {selectedRating} out of 5</span>
