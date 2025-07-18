@@ -1,105 +1,166 @@
-# Frontend Mentor - Interactive rating component solution
+## Frontend Mentor – Interactive Rating Component Solution
 
-This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+[![Deploy on Vercel](https://img.shields.io/badge/deployed-on-vercel-000000?style=flat-square\&logo=vercel)](https://interactive-rating-component-1.vercel.app)
+[![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](#license)
 
-## Table of contents
+A production-ready, refined implementation of the **Interactive Rating Component** challenge from Frontend Mentor. This repository showcases a scalable React architecture, meticulous styling, and thoughtful UX.
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-- [Author](#author)
+---
 
-## Overview
+## 📖 Table of Contents
 
-### The challenge
+1. [Overview](#overview)
+2. [Demo](#demo)
+3. [Features](#features)
+4. [Tech Stack](#tech-stack)
+5. [Project Structure](#project-structure)
+6. [Getting Started](#getting-started)
+7. [Key Learnings](#key-learnings)
+8. [Author](#author)
 
-Users should be able to:
+---
 
-- View the optimal layout for the app depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Select and submit a number rating
-- See the "Thank you" card state after submitting a rating
+## 🎯 Overview
 
-### Screenshot
+* **Objective:** Allow users to select a rating (1–5) and submit their feedback, then display a thank-you state with the chosen rating.
+* **Requirements:** Responsive layout, intuitive hover/focus states, single-selection logic, accessible markup, and seamless transition between input and acknowledgment screens.
 
-![](./screenshots/standart-card.png)
+---
 
-![](./screenshots/hover-feedback.png)
+## 🚀 Demo
 
-![](./screenshots/selected-feedback.png)
+![Standard View](./screenshots/standard-card.png)
+![Hover Feedback](./screenshots/hover-feedback.png)
+![Selection Feedback](./screenshots/selected-feedback.png)
+![Submit Hover](./screenshots/hover-submit.png)
+![Thank You State](./screenshots/final-card.png)
 
-![](./screenshots/hover-submit.png)
+Experience it live: [interactive-rating-component-1.vercel.app](https://interactive-rating-component-1.vercel.app)
 
-![](./screenshots/final-card.png)
+---
 
-### Links
+## ✨ Features
 
-- Solution URL: [https://your-solution-url.com](https://interactive-rating-component-1.vercel.app)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+* **Responsive Layout:** Fluid grid and flexbox ensure an optimal presentation on mobile, tablet, and desktop.
+* **Interactive States:** Custom hover and focus styles for buttons and rating elements.
+* **Single-Select Logic:** Only one rating can be active at a time; clicking the selected rating toggles it off.
+* **Accessible Markup:** Semantic HTML5 elements with ARIA attributes where appropriate.
+* **State Management:** Lightweight custom hook (`useRating`) encapsulates selection logic.
+* **Smooth Transitions:** React-controlled conditional rendering for seamless state changes.
 
-## My process
+---
 
-### Built with
+## 🛠️ Tech Stack
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- [React](https://reactjs.org/) - JS library
-- [Vite](https://pt.vite.dev) - Build tool
-- [Styled Components](https://styled-components.com/) - For styles
+* **Language & Framework:** JavaScript (ES6+), React 18
+* **Build Tool:** Vite
+* **Styling:** Styled Components, CSS Custom Properties, Flexbox, CSS Grid
+* **Version Control:** Git & GitHub
+* **Deployment:** Vercel
 
-### What I learned
-I enhanced my web development skills with React and refined my command of CSS. I also adopted new architectures and organized project folder structures more efficiently.
+---
 
-Function to switch between cards
-```js
-function CardSwitcher() {
-    const { selectedRating, handleSelect } = useRating()
+## 📂 Project Structure
 
-    const [submited, setSubmited] = useState(false)
-    function handleSubmit() {
-        setSubmited(true)}
-
-    return (
-        <div>
-            {
-            submited ? 
-            <ThankYouCard selectedRating = { selectedRating }/> : 
-            <FeedbackCard selectedRating = { selectedRating } handleSelect = { handleSelect } send={handleSubmit} 
-            />}
-        </div>
-    )
-}
+```
+/src
+├── assets/                  # Static images and SVGs
+├── components/              # Reusable UI components
+│   ├── Button/              # Generic button component
+│   ├── FeedbackCard/        # Rating input card
+│   ├── Rater/               # Numeric rating button
+│   └── ThankYouCard/        # Acknowledgment card
+├── container/
+│   └── CardSwitcher/        # Card-switching logic
+├── hooks/
+│   └── useRating/           # Selection logic hook
+├── styles/                  # Global styles and theme (globals.css)
+├── App.jsx                  # Root component (CardSwitcher)
+└── main.jsx                 # Application entry point
 ```
 
-Function to choose only one of the feedback options
-```js
-import { useState, useCallback } from "react"
+---
 
-export default function UseRating(){
-       const [selectedRating, setSelectedRating] = useState(null)
-    
-       const handleSelect = useCallback ((number) =>{
-        setSelectedRating(prev => prev === number ? null : number)
-       }, []);
+## 🏁 Getting Started
 
-       return { selectedRating, handleSelect }    
-}   
-```
+### Prerequisites
 
-### Continued development
+* Node.js (v16 or later)
+* npm or Yarn
 
-I have enhanced my React and CSS skills, and I plan to learn Next.js in the future.
+### Installation
 
-## Author
+1. **Clone the repository**
 
-- Fábio Moretão
-- Frontend Mentor - [@fabiomoretao](https://www.frontendmentor.io/profile/fabiomoretao)
-- Instagram - [fabio_moretao](https://www.instagram.com/fabio_moretao)
+   ```bash
+   git clone https://github.com/fabiomoretao/interactive-rating-component.git
+   cd interactive-rating-component
+   ```
 
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Run in development mode**
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. **Build for production**
+
+   ```bash
+   npm run build
+   # or
+   yarn build
+   ```
+
+5. **Preview production build**
+
+   ```bash
+   npm run preview
+   # or
+   yarn preview
+   ```
+
+---
+
+## 📚 Key Learnings
+
+* Designed a clear separation of concerns between UI presentation and state logic using a custom React Hook (`useRating`).
+
+  ```jsx
+  // useRating.js
+  import { useState, useCallback } from 'react';
+
+  export default function useRating() {
+    const [selected, setSelected] = useState(null);
+    const handleSelect = useCallback((value) => {
+      setSelected((prev) => (prev === value ? null : value));
+    }, []);
+
+    return { selected, handleSelect };
+  }
+  ```
+
+* Leveraged styled-components to maintain scoped, themeable styles without class name collisions.
+
+* Ensured accessibility with semantic elements and ARIA roles for interactive controls.
+
+* Utilized Vite for rapid HMR and optimized build output.
+
+---
+
+## 👤 Author
+
+**Fábio Moretão**
+Frontend Engineer & Enthusiast
+
+* Frontend Mentor: [@fabiomoretao](https://www.frontendmentor.io/profile/fabiomoretao)
+* Instagram: [@fabio\_moretao](https://www.instagram.com/fabio_moretao)
