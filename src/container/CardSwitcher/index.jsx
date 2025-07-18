@@ -1,10 +1,10 @@
 import FeedbackCard from "../../components/FeedbackCard"
 import ThankYouCard from "../../components/ThankYouCard"
-import useRating from "../../hooks/UseRating"
+import UseRating from "../../hooks/UseRating"
 import { useState } from "react"
 
 function CardSwitcher() {
-    const { selectedRating, handleSelect } = useRating()
+    const { selectedRating, handleSelect } = UseRating()
 
     const [submited, setSubmited] = useState(false)
     function handleSubmit() {
