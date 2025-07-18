@@ -1,6 +1,6 @@
 import FeedbackCard from "../../components/FeedbackCard"
 import ThankYouCard from "../../components/ThankYouCard"
-import UseRating from "../../hooks/UseRating"
+import UseRating from "../../hooks/useRating"
 import { useState } from "react"
 
 function CardSwitcher() {
